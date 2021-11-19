@@ -24,7 +24,8 @@ class Car extends Vehicle {
     loadPassenger(num){
         if (this.passenger < this.maximumPassengers) {
             if ((num + this.passenger) <= this.maximumPassengers) {
-                this.passenger = num
+                this.passenger = num + this.passenger
+                console.log(this.make + " " + this.model + " can fit passengers.")
                 return this.passenger
             } else {
                 console.log (this.make + " " + this.model + " cannot fit all passengers.")
